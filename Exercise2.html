@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise-2 3D-Cube</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .cube {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      transform-style: preserve-3d;
+      transform: rotateX(20deg) rotateY(30deg);
+    }
+
+    .side {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      background-color: rgba(0, 0, 0, 0.2);
+      border: 1px solid #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgb(167, 167, 239);
+      opacity: 0.8;
+      font-size: 25px;
+    }
+
+    .front {
+      transform: translateZ(100px);
+    }
+
+    .back {
+      transform: rotateY(180deg) translateZ(100px);
+    }
+
+    .right {
+      transform: rotateY(90deg) translateZ(100px);
+    }
+
+    .left {
+      transform: rotateY(-90deg) translateZ(100px);
+    }
+
+    .top {
+      transform: rotateX(90deg) translateZ(100px);
+    }
+
+    .bottom {
+      transform: rotateX(-90deg) translateZ(100px);
+    }
+  </style>
+  <body>
+    <div class="cube">
+      <div class="side front">Front</div>
+      <div class="side back">Back</div>
+      <div class="side right">Right</div>
+      <div class="side left">Left</div>
+      <div class="side top">Top</div>
+      <div class="side bottom">Bottom</div>
+    </div>
+  </body>
+</html>
